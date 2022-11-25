@@ -8,7 +8,7 @@ export const HttpService = () => {
     const postSignupClient = async (token) => {
         try {
             const response = await axios({
-                url: "http://127.0.0.1:5000/v1/signup/auth",
+                url: `${process.env.REACT_APP_PROXY}/v1/signup/auth`,
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export const HttpService = () => {
     const postSigninClient = async (token) => {
         try {
             const response = await axios({
-                url: "http://127.0.0.1:5000/v1/signin/auth",
+                url: `${process.env.REACT_APP_PROXY}/v1/signin/auth`,
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ export const HttpService = () => {
     const postSigninRegistercv = async (form) => {
         try {
             const response = await axios({
-                url: "http://127.0.0.1:5000/v1/register/usercv",
+                url: `${process.env.REACT_APP_PROXY}/v1/register/usercv`,
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export const HttpService = () => {
     const getDataUsercv = async () => {
         try {
             const response = await axios({
-                url: "http://127.0.0.1:5000/v1/datos/usercv",
+                url: `${process.env.REACT_APP_PROXY}/v1/datos/usercv`,
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json',
