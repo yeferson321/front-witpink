@@ -40,7 +40,7 @@ function CarouselTwo() {
             localStorage.setItem("habilidades", JSON.stringify(habilidades))
             additemtwo({ nivel, conocimientos, habilidades })
         }
-    }, [nivel, conocimiento, habilidad]);
+    }, [nivel, conocimiento, habilidad, habilidades, conocimientos, additemtwo()]);
 
     return (
         <div>
@@ -98,7 +98,7 @@ function CarouselTwo() {
                         <div class="row row-cols-2">
                             {
                                 conocimientos.map((item, index) =>
-                                    <h4 key={index} class="mb-3 p-0">{item}</h4>
+                                    <h4 key={index} class="text-white-50 mb-3 p-0">{item}</h4>
                                 )
                             }
                         </div>
@@ -139,7 +139,7 @@ function CarouselTwo() {
                         <div class="row row-cols-2">
                             {
                                 habilidades.map((item, index) =>
-                                    <h4 key={index} class="mb-3 p-0">{item}</h4>
+                                    <h4 key={index} class="text-white-50 mb-3 p-0">{item}</h4>
                                 )
                             }
                         </div>

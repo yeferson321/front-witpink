@@ -59,8 +59,8 @@ export const useForm = (send) => {
         if (itemone, itemtwo, itemthree) {
             send.style.display = 'block';
         }
-    }, [itemone, itemtwo, itemthree]);
+    }, [itemone, itemtwo, itemthree, send]);
 
-    return { error, response, progress, handleClick, handleSubmit, handleClick }
+    return { error, response, progress, handleClick, handleSubmit }
 
 }

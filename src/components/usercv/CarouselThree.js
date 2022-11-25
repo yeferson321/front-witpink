@@ -29,7 +29,7 @@ function CarouselThree() {
             localStorage.setItem("interes", interes)
             addItemthree({ idiomas, presentacion, interes })
         }
-    }, [idiomas, presentacion, interes]);
+    }, [idiomas, presentacion, interes, addItemthree()]);
 
     return (
 
@@ -65,7 +65,7 @@ function CarouselThree() {
                         <div class="row row-cols-2">
                             {
                                 idiomas.map((item, index) =>
-                                    <h4 key={index} class="mb-3 p-0">{item}</h4>
+                                    <h4 key={index} class="text-white-50 mb-3 p-0">{item}</h4>
                                 )
                             }
                         </div>

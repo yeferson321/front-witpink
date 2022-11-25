@@ -26,7 +26,7 @@ function Profile() {
             setHabilidades(res.data.message.habilidades)
             setIdiomas(res.data.message.idiomas)
         })
-    }, []);
+    }, [getDataUsercv()]);
 
     return (
         <div>

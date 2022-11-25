@@ -20,7 +20,7 @@ function CarouselOne() {
             localStorage.setItem("telefono", telefono)
             addItemone({ name, ocupacion, prefijo, telefono })
         }
-    }, [name, ocupacion, prefijo, telefono]);
+    }, [name, ocupacion, prefijo, telefono, addItemone()]);
 
     return (
         <div>
