@@ -1,0 +1,10 @@
+.container {
+    padding: 25px;
+    min-height: 100vh;
+
+    background-color: hsl(0, 0%, 7%);
+}
+
+.input {
+    background: black !important;
+}

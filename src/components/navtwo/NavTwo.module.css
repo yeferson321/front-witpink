@@ -1,0 +1,16 @@
+.img {
+    width: 37px;
+}
+
+.text {
+    font-family: cursive;
+}
+
+.offcanvas {
+    width: 70% !important;
+}
+
+.nav {
+    position: relative;
+    background-color: black;
+}

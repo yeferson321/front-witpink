@@ -1,0 +1,21 @@
+.navbar{
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+
+.text {
+    font-family: cursive;
+}
+
+.bi{
+    font-size: 29px;
+}
+
+.btn_dark{
+    background-color: #000;
+}
+
+.btn_dark:hover{
+    background-color: #000;
+    border-color: #000;
+}

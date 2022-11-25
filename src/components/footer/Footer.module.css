@@ -1,0 +1,12 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    background-color: #111111 !important;
+}
+
+.text {
+    font-family: cursive;
+}

@@ -1,0 +1,52 @@
+.fundraw {
+    margin-top: 14%;
+}
+
+.img {
+    width: 340px;
+    mix-blend-mode: screen;
+}
+
+.img_fluid {
+    width: 160px;
+}
+
+.text_h1 {
+    font-size: 40px;
+    font-family: system-ui;
+    background: linear-gradient(rgb(0, 41, 91), rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    background-clip: transparent;
+    color: transparent;
+}
+
+.border {
+    background-image: linear-gradient(#111111, black);
+}
+
+.text_info {
+    font-size: 40px;
+    font-family: system-ui;
+    background: linear-gradient(#0084ff, #a3d3ff);
+    -webkit-background-clip: text;
+    background-clip: transparent;
+    color: transparent;
+}
+
+@keyframes bgcolor {
+    0% {
+        color: #0084ff;
+    }
+
+    25% {
+        color: #ff5e00;
+    }
+
+    50% {
+        color: #de00ee;
+    }
+
+    100% {
+        color: #0084ff;
+    }
+}

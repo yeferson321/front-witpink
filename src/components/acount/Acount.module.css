@@ -1,0 +1,12 @@
+.container {
+    height: 100vh;
+    background-color: #111111;
+}
+
+.selected {
+    background-color: black !important;
+}
+
+.button {
+    margin-bottom: 40%;
+}
