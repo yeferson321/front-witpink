@@ -8,7 +8,7 @@ import { useForm } from './useForm';
 function Usercv() {
 
     const send = document.getElementById('send');
-    const { error, response, progress, handleClick, handleSubmit } = useForm(send);
+    const { progress, handleClick, handleSubmit } = useForm(send);
 
     return (
 

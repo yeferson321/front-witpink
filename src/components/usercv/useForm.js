@@ -9,7 +9,6 @@ export const useForm = (send) => {
     const navigate = useNavigate();
     const { postSigninRegistercv } = HttpService();
     const [error, setError] = useState();
-    const [response, setResponse] = useState();
     const { itemone } = useContext(DataContext);
     const { itemtwo } = useContext(DataContext);
     const { itemthree } = useContext(DataContext);
@@ -49,7 +48,7 @@ export const useForm = (send) => {
                 }
             })
         } catch (error) {
-            setError("Intente con un proveedor diferente")
+            setError("Intente de nuevo")
         }
 
     }
@@ -61,6 +60,6 @@ export const useForm = (send) => {
         }
     }, [itemone, itemtwo, itemthree, send]);
 
-    return { error, response, progress, handleClick, handleSubmit }
+    return { progress, handleClick, handleSubmit }
 
 }

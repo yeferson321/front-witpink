@@ -6,10 +6,10 @@ import Scroll from "../scroll/Scroll.js";
 function Welcome() {
     return (
         <div>
-            <Navtwo/>
-            <Scroll/>
-            <Outlet/>
-            <Footer/>
+            <Navtwo />
+            <Scroll />
+            <Outlet />
+            <Footer />
         </div>
     )
 }

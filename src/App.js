@@ -20,6 +20,7 @@ import Usercv from './components/usercv/Usercv.js';
 import Welcome from './components/welcome/Welcome.js';
 import Search from './components/search/Search';
 import Profile from './components/profile/Profilee';
+import Notification from './components/notification/Notification.js'
 
 function App() {
   return (
@@ -30,13 +31,14 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
 
-        <Route path="personcv" element={<Usercv />} />
-          <Route path="acount" element={<Acount />} />
-
         <Route element={<ProtectetedRouter />}>
-
+          <Route path="/" element={<Home />} />
           <Route path="/welcome" element={<Welcome />} >
+            <Route path="personcv" element={<Usercv />} />
+            <Route path="acount" element={<Acount />} />
             <Route path="search" element={<Search />} />
+
+            <Route path='notification' element={<Notification />} />
             <Route path="profile" element={<Profile />} />
           </Route>
         </Route>

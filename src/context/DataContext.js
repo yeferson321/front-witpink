@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const DataContext = createContext();
 
-const DataProvider = ({children}) => {
+const DataProvider = ({ children }) => {
 
   const [itemone, setItemone] = useState(null)
   const addItemone = (itemone) => { setItemone(itemone) }
