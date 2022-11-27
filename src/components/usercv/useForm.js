@@ -9,6 +9,7 @@ export const useForm = (send) => {
     const navigate = useNavigate();
     const { postSigninRegistercv } = HttpService();
     const [error, setError] = useState();
+    const [response, setResponse] = useState();
     const { itemone } = useContext(DataContext);
     const { itemtwo } = useContext(DataContext);
     const { itemthree } = useContext(DataContext);

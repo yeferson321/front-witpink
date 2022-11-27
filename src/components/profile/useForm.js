@@ -18,9 +18,6 @@ export const useForm = () => {
     useEffect(() => {
         getDataUsercv().then((res) => {
             setDatos(res.data.message)
-            setConocimientos(res.data.message.conocimientos)
-            setHabilidades(res.data.message.habilidades)
-            setIdiomas(res.data.message.idiomas)
         })
     }, []);
 
