@@ -11,7 +11,6 @@ export const HttpService = () => {
                 url: `${process.env.REACT_APP_PROXY}/v1/signup/auth`,
                 method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 }
             })
@@ -27,7 +26,6 @@ export const HttpService = () => {
                 url: `${process.env.REACT_APP_PROXY}/v1/signin/auth`,
                 method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 }
             })
@@ -60,7 +58,6 @@ export const HttpService = () => {
                 url: `${process.env.REACT_APP_PROXY}/v1/datos/usercv`,
                 method: "GET",
                 headers: {
-                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
             })
@@ -70,6 +67,38 @@ export const HttpService = () => {
         }
     }
 
-    return { postSignupClient, postSigninClient, postSigninRegistercv, getDataUsercv }
+    const updateDataUsercv = async (form) => {
+        try {
+            const response = await axios({
+                url: `${process.env.REACT_APP_PROXY}/v1/update/datos/usercv`,
+                method: "PUT",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                },
+                data: form
+            })
+            return response
+        } catch (error) {
+            return error.response
+        }
+    }
+
+    const delateAccount = async () => {
+        try {
+            const response = await axios({
+                url: `${process.env.REACT_APP_PROXY}/v1/delete/account`,
+                method: "DELETE",
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            })
+            return response
+        } catch (error) {
+            return error.response
+        }
+    }
+
+    return { postSignupClient, postSigninClient, postSigninRegistercv, getDataUsercv, updateDataUsercv, delateAccount }
 
 }

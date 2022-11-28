@@ -16,11 +16,15 @@ import Home from './components/home/Home.js';
 import Signup from './components/signup/Signup.js';
 import Signin from './components/signin/Signin.js';
 import Acount from './components/acount/Acount.js';
-import Usercv from './components/usercv/Usercv.js';
+import FormUsercv from './components/formusercv/FormUsercv';
+import FormOne from './components/formone/FormOne';
+import FormTwo from './components/formtwo/FormTwo';
+import FormThree from './components/formthree/FormThree.js';
 import Welcome from './components/welcome/Welcome.js';
 import Search from './components/search/Search';
-import Profile from './components/profile/Profilee';
-import Notification from './components/notification/Notification.js'
+import Profile from './components/profile/Profilee.js';
+import Notification from './components/notification/Notification.js';
+import Update from './components/update/Update';
 
 function App() {
   return (
@@ -32,15 +36,21 @@ function App() {
         <Route path="/signin" element={<Signin />} />
 
         <Route element={<ProtectetedRouter />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/welcome" element={<Welcome />} >
-            <Route path="personcv" element={<Usercv />} />
-            <Route path="acount" element={<Acount />} />
-            <Route path="search" element={<Search />} />
+          <Route path="/update" element={<Update />} />
+          <Route path="/acount" element={<Acount />} />
 
+          <Route path="/formusercv" element={<FormUsercv />} >
+            <Route path='one' element={<FormOne/>}></Route>
+            <Route path='two' element={<FormTwo/>}></Route>
+            <Route path='three' element={<FormThree/>}></Route>
+          </Route>
+
+          <Route path="/welcome" element={<Welcome />} >
+            <Route path="search" element={<Search />} />
             <Route path='notification' element={<Notification />} />
             <Route path="profile" element={<Profile />} />
           </Route>
+
         </Route>
 
         <Route path="*" element={<Home />} />

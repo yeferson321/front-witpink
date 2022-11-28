@@ -7,6 +7,7 @@ function Nav() {
     const { checkToken } = AuthService();
     const { logout } = AuthService();
     const navigate = useNavigate();
+    const img = `${localStorage.getItem("pinture")}`
 
     const salir = () => {
         logout()
@@ -23,14 +24,14 @@ function Nav() {
                         <h2 className={`${styles.text} ${"text-white fw-bolder mb-0"}`}>WitPink</h2>
                         <div className="btn-group">
                             <a className="" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://avatars.githubusercontent.com/u/70369030?v=4" className={`${styles.img} ${"rounded-circle"}`} alt="..." />
+                                <img src={img} className={`${styles.img} ${"rounded-circle"}`} alt="..." />
                             </a>
                             <ul className={`${styles.dropdown} ${"dropdown-menu dropdown-menu-end text-center"}`}>
                                 <li><Link className="dropdown-item fw-semibold text-white" to="/">Inicio</Link></li>
-                                <li><Link className="dropdown-item fw-semibold text-white" to="/welcome">Perfil</Link></li>
-                                <li><Link className="dropdown-item fw-semibold text-white" to="/welcome">Actividad</Link></li>
+                                <li><Link className="dropdown-item fw-semibold text-white" to="/welcome/profile">Perfil</Link></li>
+                                <li><Link className="dropdown-item fw-semibold text-white" to="/welcome/search">Ofertas</Link></li>
                                 <li><hr className="dropdown-divider bg-secondary" /></li>
-                                <button type="button" class="btn btn-outline-primary" onClick={salir}>Salir ahora</button>
+                                <button type="button" className="btn btn-outline-primary" onClick={salir}>Salir ahora</button>
                             </ul>
                         </div>
                     </div>

@@ -16,10 +16,10 @@ export const useForm = () => {
     const handleSubmit = () => {
         if (profile === "person") {
             localStorage.setItem("profile", profile)
-            navigate('/personcv');
+            navigate('/formusercv/one');
         } else {
             localStorage.setItem("profile", profile)
-            navigate('/businesscv');
+            navigate('/formusercv');
         }
     }
 

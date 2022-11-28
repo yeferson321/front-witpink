@@ -29,10 +29,12 @@ export const useForm = () => {
                 if (res.data.auth === true) {
                     if (res.data.newuser) {
                         login(res.data.message)
+                        localStorage.setItem('pinture', res.data.pinture)
                         navigate('/acount');
                     } else {
                         login(res.data.message)
-                        navigate('/welcome');
+                        localStorage.setItem('pinture', res.data.pinture)
+                        navigate('/welcome/search');
                     }
                 } else {
                     setResponse(res.data.message)
@@ -60,10 +62,12 @@ export const useForm = () => {
                 if (res.data.auth === true) {
                     if (res.data.newuser) {
                         login(res.data.message)
+                        localStorage.setItem('pinture', res.data.pinture)
                         navigate('/acount');
                     } else {
                         login(res.data.message)
-                        navigate('/welcome');
+                        localStorage.setItem('pinture', res.data.pinture)
+                        navigate('/welcome/search');
                     }
                 } else {
                     setResponse(res.data.message)
@@ -91,10 +95,12 @@ export const useForm = () => {
                 if (res.data.auth === true) {
                     if (res.data.newuser) {
                         login(res.data.message)
+                        localStorage.setItem('pinture', res.data.pinture)
                         navigate('/acount');
                     } else {
                         login(res.data.message)
-                        navigate('/welcome');
+                        localStorage.setItem('pinture', res.data.pinture)
+                        navigate('/welcome/search');
                     }
                 } else {
                     setResponse(res.data.message)

@@ -1,0 +1,21 @@
+.container {
+    padding: 20% 8%;
+    justify-content: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 7%);
+}
+
+.carousel {
+    width: 100%;
+}
+
+.input {
+    background: black !important;
+}
+
+.footer {
+    margin-top: 20%;
+}

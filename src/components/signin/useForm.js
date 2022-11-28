@@ -28,7 +28,8 @@ export const useForm = () => {
             postSigninClient(credentials.user.accessToken).then((res) => {
                 if (res.data.auth === true) {
                     login(res.data.message)
-                    navigate('/welcome');
+                    localStorage.setItem('pinture', res.data.pinture)
+                    navigate('/welcome/search');
                 } else {
                     setResponse(res.data.message)
                 }
@@ -54,7 +55,8 @@ export const useForm = () => {
             postSigninClient(credentials.user.accessToken).then((res) => {
                 if (res.data.auth === true) {
                     login(res.data.message)
-                    navigate('/welcome');
+                    localStorage.setItem('pinture', res.data.pinture)
+                    navigate('/welcome/search');
                 } else {
                     setResponse(res.data.message)
                 }
@@ -80,8 +82,9 @@ export const useForm = () => {
             const credentials = await signInWithPopup(auth, provider)
             postSigninClient(credentials.user.accessToken).then((res) => {
                 if (res.data.auth === true) {
-                    login(res.data.message)
-                    navigate('/welcome');
+                    login(res.data.message);
+                    localStorage.setItem('pinture', res.data.pinture);
+                    navigate('/welcome/search');
                 } else {
                     setResponse(res.data.message)
                 }

@@ -22,6 +22,7 @@ export const AuthService = () => {
      */
     const logout = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('pinture')
     };
 
     return { login, logout, checkToken }

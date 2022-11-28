@@ -1,13 +1,14 @@
-import styles from './NavTwo.module.css';
+import styles from './ReturnTwo.module.css';
 import { AuthService } from '../services/Auth.js';
 import { Link, useNavigate } from 'react-router-dom';
 
-function Navtwo() {
+function ReturnTwo() {
 
+    const history = useNavigate();
     const navigate = useNavigate();
     const { logout } = AuthService();
     const img = `${localStorage.getItem("pinture")}`
-
+    
     const salir = () => {
         logout()
         navigate('/')
@@ -17,7 +18,9 @@ function Navtwo() {
         <div>
             <nav className={`${styles.navbar} ${"navbar pt-3"}`}>
                 <div className="container-fluid px-4">
-                    <h2 className={`${styles.text} ${"text-white fw-bolder mb-0"}`}>WitPink</h2>
+                    <div onClick={() => history(-1)}>
+                        <i className="bi bi-chevron-left text-white fs-1"></i>
+                    </div>
                     <div className="btn-group">
                         <a className="" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src={img} className={`${styles.img} ${"rounded-circle"}`} alt="..." />
@@ -36,4 +39,4 @@ function Navtwo() {
     )
 }
 
-export default Navtwo
+export default ReturnTwo
