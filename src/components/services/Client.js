@@ -84,7 +84,7 @@ export const HttpService = () => {
         }
     }
 
-    const delateAccount = async (form) => {
+    const delateAccount = async () => {
         try {
             const response = await axios({
                 url: `${process.env.REACT_APP_PROXY}/v1/delete/account`,
@@ -99,6 +99,6 @@ export const HttpService = () => {
         }
     }
 
-    return { postSignupClient, postSigninClient, postSigninRegistercv, getDataUsercv, updateDataUsercv }
+    return { postSignupClient, postSigninClient, postSigninRegistercv, getDataUsercv, updateDataUsercv, delateAccount }
 
 }
