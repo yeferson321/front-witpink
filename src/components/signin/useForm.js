@@ -28,7 +28,6 @@ export const useForm = () => {
             postSigninClient(credentials.user.accessToken).then((res) => {
                 if (res.data.auth === true) {
                     login(res.data.message)
-                    console.log(res.data)
                     localStorage.setItem('pinture', res.data.pinture)
                     navigate('/welcome/search');
                 } else {
