@@ -12,7 +12,7 @@ function Signin() {
         <div>
             <Return />
 
-            <div className='mx-5 my-5'>
+            <div className={`${styles.container} ${"mx-5 my-5"}`}>
 
                 <h1 className={`${styles.text_h1} ${"fw-semibold text-white mb-4"}`}>Inicia sesión en Witpink</h1>
 

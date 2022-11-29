@@ -18,3 +18,10 @@
     border: 1px solid rgb(59, 59, 59);
     background-color: #111;
 }
+
+@media screen and (min-width: 700px) {
+    .card_group {
+        gap: 50px;
+        align-items: center
+    }
+}

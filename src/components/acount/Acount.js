@@ -12,7 +12,7 @@ function Acount() {
 
             <div className={`${styles.container} ${"d-flex flex-column"}`}>
 
-                <div className="m-auto px-5 text-center">
+                <div className={`${styles.m_auto} ${"m-auto px-5 text-center"}`}>
 
                     <h1 className="fw-bolder text-white">Algoritmos de selección automática</h1>
                     <p className="mx-auto fs-5 mb-4 fw-semibold text-secondary">Reducimos el tiempo de selección de candidatos, elige tu tipo de perfil</p>

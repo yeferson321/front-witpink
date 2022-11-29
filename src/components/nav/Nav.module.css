@@ -28,3 +28,10 @@
     background-color: black;
     border: 1px solid rgb(59, 59, 59);
 }
+
+@media screen and (min-width: 700px) {
+    .collapse {
+        padding-left: 250px!important;
+        padding-right: 250px!important;
+    }
+}

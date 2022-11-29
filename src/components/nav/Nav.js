@@ -45,7 +45,7 @@ function Nav() {
                         <button className="btn border-0 px-0 pt-0 pb-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                             <i className={`${styles.bi} ${"bi bi-list text-white border-0"}`}></i>
                         </button>
-                        <div className="collapse navbar-collapse px-4 pt-0 pb-0" id="navbarTogglerDemo02">
+                        <div className={`${styles.collapse} ${"collapse navbar-collapse px-4 pt-0 pb-0"}`} id="navbarTogglerDemo02">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-center">
                                 <li className="nav-item">
                                     <a className="nav-link text-white fw-semibold" aria-current="page" href="#">Ofertas</a>
