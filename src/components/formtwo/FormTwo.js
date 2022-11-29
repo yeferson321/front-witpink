@@ -33,7 +33,7 @@ function FormTwo() {
                             <datalist id="conocimientos">
                                 <option value="Adobe"></option>
                                 <option value="After"></option>
-                                <option value="Angular js"></option>
+                                <option value="Angular"></option>
                                 <option value="Azure"></option>
                                 <option value="C+"></option>
                                 <option value="C+"></option>
@@ -48,7 +48,7 @@ function FormTwo() {
                                 <option value="Jira"></option>
                                 <option value="Mongodb"></option>
                                 <option value="Proadobe"></option>
-                                <option value="Pytho"></option>
+                                <option value="Python"></option>
                                 <option value="React"></option>
                                 <option value="Ruby"></option>
                                 <option value="Scala"></option>

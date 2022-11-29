@@ -6,7 +6,7 @@ function FormUsercv() {
     return (
         <div>
             <Return />
-            <ScrollTwo />
+            
             <Outlet />
         </div>
     )

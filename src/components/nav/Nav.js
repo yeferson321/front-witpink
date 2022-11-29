@@ -21,7 +21,7 @@ function Nav() {
 
                 <nav className={`${styles.navbar} ${"navbar pt-3"}`}>
                     <div className="container-fluid px-4">
-                        <h2 className={`${styles.text} ${"text-white fw-bolder mb-0"}`}>WitPink</h2>
+                        <h2 className={`${styles.text} ${"text-white  mb-0"}`}>WitPink</h2>
                         <div className="btn-group">
                             <a className="" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src={img} className={`${styles.img} ${"rounded-circle"}`} alt="..." />
