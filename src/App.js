@@ -25,6 +25,12 @@ import Search from './components/search/Search';
 import Profile from './components/profile/Profilee.js';
 import Notification from './components/notification/Notification.js';
 import Update from './components/update/Update';
+import WelcomeCompany from './components/welcomecompany/WelcomeCompany.js';
+import FormCompanycv from './components/formcompany/FormCompany';
+import FormCompanyOne from './components/formcompanyone/FormCompanyOne';
+import FormCompanyTwo from './components/formcompanytwo/FormCompanyTwo';
+import ProfileBusiness from './components/profilecompany/ProfileBusiness';
+import Publicar from './components/publicar/Publicar.js';
 
 function App() {
   return (
@@ -38,17 +44,29 @@ function App() {
         <Route element={<ProtectetedRouter />}>
           <Route path="/update" element={<Update />} />
           <Route path="/acount" element={<Acount />} />
+          <Route path='/publicar' element={<Publicar/>} />
+
+          <Route path='/formcompanycv' element={<FormCompanycv />}>
+            <Route path='formcompanyone' element={<FormCompanyOne />}/>
+            <Route path='formcompanytwo' element={<FormCompanyTwo />}/>
+          </Route>
 
           <Route path="/formusercv" element={<FormUsercv />} >
-            <Route path='one' element={<FormOne/>}></Route>
-            <Route path='two' element={<FormTwo/>}></Route>
-            <Route path='three' element={<FormThree/>}></Route>
+            <Route path='one' element={<FormOne />}/>
+            <Route path='two' element={<FormTwo />}/>
+            <Route path='three' element={<FormThree />}/>
           </Route>
 
           <Route path="/welcome" element={<Welcome />} >
             <Route path="search" element={<Search />} />
             <Route path='notification' element={<Notification />} />
             <Route path="profile" element={<Profile />} />
+          </Route>
+
+          <Route path="/welcomecompany" element={<WelcomeCompany />} >
+            <Route path='profilebusiness' element={<ProfileBusiness />}/>
+            <Route path="search" element={<Search />} />
+            <Route path='notification' element={<Notification />} />
           </Route>
 
         </Route>

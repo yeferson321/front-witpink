@@ -26,15 +26,17 @@ export const useForm = () => {
         try {
             const credentials = await signInWithPopup(auth, provider)
             postSignupClient(credentials.user.accessToken).then((res) => {
+                console.log(res.data)
                 if (res.data.auth === true) {
+                    login(res.data)
                     if (res.data.newuser) {
-                        login(res.data.message)
-                        localStorage.setItem('pinture', res.data.pinture)
                         navigate('/acount');
                     } else {
-                        login(res.data.message)
-                        localStorage.setItem('pinture', res.data.pinture)
-                        navigate('/welcome/search');
+                        if (res.data.accounttype === "person") {
+                            navigate('/welcome/search');
+                        } else {
+                            navigate('/welcomecompany/profilebusiness');
+                        }
                     }
                 } else {
                     setResponse(res.data.message)
@@ -60,14 +62,15 @@ export const useForm = () => {
             const credentials = await signInWithPopup(auth, provider)
             postSignupClient(credentials.user.accessToken).then((res) => {
                 if (res.data.auth === true) {
+                    login(res.data)
                     if (res.data.newuser) {
-                        login(res.data.message)
-                        localStorage.setItem('pinture', res.data.pinture)
                         navigate('/acount');
                     } else {
-                        login(res.data.message)
-                        localStorage.setItem('pinture', res.data.pinture)
-                        navigate('/welcome/search');
+                        if (res.data.accounttype === "person") {
+                            navigate('/welcome/search');
+                        } else {
+                            navigate('/welcomecompany/profilebusiness');
+                        }
                     }
                 } else {
                     setResponse(res.data.message)
@@ -93,14 +96,15 @@ export const useForm = () => {
             const credentials = await signInWithPopup(auth, provider)
             postSignupClient(credentials.user.accessToken).then((res) => {
                 if (res.data.auth === true) {
+                    login(res.data)
                     if (res.data.newuser) {
-                        login(res.data.message)
-                        localStorage.setItem('pinture', res.data.pinture)
                         navigate('/acount');
                     } else {
-                        login(res.data.message)
-                        localStorage.setItem('pinture', res.data.pinture)
-                        navigate('/welcome/search');
+                        if (res.data.accounttype === "person") {
+                            navigate('/welcome/search');
+                        } else {
+                            navigate('/welcomecompany/profilebusiness');
+                        }
                     }
                 } else {
                     setResponse(res.data.message)

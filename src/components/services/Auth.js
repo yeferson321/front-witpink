@@ -13,8 +13,9 @@ export const AuthService = () => {
     /**
      * It takes a token as an argument and stores it in localStorage.
      */
-    const login = (token) => {
-        localStorage.setItem('token', token);
+    const login = (data) => {
+        localStorage.setItem('token', data.message);
+        localStorage.setItem('pinture', data.pinture);
     };
 
     /**

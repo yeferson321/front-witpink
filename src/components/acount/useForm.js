@@ -19,7 +19,7 @@ export const useForm = () => {
             navigate('/formusercv/one');
         } else {
             localStorage.setItem("profile", profile)
-            // navigate('/formusercv');
+            navigate('/formcompanycv/formcompanyone');
         }
     }
 

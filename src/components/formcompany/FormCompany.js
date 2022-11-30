@@ -1,7 +1,7 @@
 import Return from '../return/Return.js';
 import { Outlet } from "react-router-dom";
 
-function FormUsercv() {
+function FormCompany() {
     return (
         <div>
             <Return />
@@ -10,4 +10,4 @@ function FormUsercv() {
     )
 }
 
-export default FormUsercv
+export default FormCompany

@@ -99,6 +99,82 @@ export const HttpService = () => {
         }
     }
 
-    return { postSignupClient, postSigninClient, postSigninRegistercv, getDataUsercv, updateDataUsercv, delateAccount }
+    const postSigninRegisterCompanycv = async (form) => {
+        try {
+            const response = await axios({
+                url: `${process.env.REACT_APP_PROXY}/v1/register/bussinesscv`,
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                },
+                data: form
+            })
+            return response
+        } catch (error) {
+            return error.response
+        }
+    }
+
+    const getDataBusinesscv = async () => {
+        try {
+            const response = await axios({
+                url: `${process.env.REACT_APP_PROXY}/v1/datos/businesscv`,
+                method: "GET",
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            })
+            return response
+        } catch (error) {
+            return error.response
+        }
+    }
+
+    const delateAccountBusiness = async () => {
+        try {
+            const response = await axios({
+                url: `${process.env.REACT_APP_PROXY}/v1/delete/accountbusiness`,
+                method: "DELETE",
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            })
+            return response
+        } catch (error) {
+            return error.response
+        }
+    }
+
+    const postOfertaBusiness = async (data) => {
+        try {
+            const response = await axios({
+                url: `${process.env.REACT_APP_PROXY}/v1/register/oferta`,
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                },
+                data: data
+            })
+            return response
+        } catch (error) {
+            return error.response
+        }
+    }
+
+    const getDataSearchjobs = async (search) => {
+        try {
+            const response = await axios({
+                url: `${process.env.REACT_APP_PROXY}/v1/datos/search/jobs/${search}`,
+                method: "GET",
+            })
+            return response
+        } catch (error) {
+            return error.response
+        }
+    }
+
+    return { postSignupClient, postSigninClient, postSigninRegistercv, getDataUsercv, updateDataUsercv, delateAccount, postSigninRegisterCompanycv, getDataBusinesscv, delateAccountBusiness, postOfertaBusiness, getDataSearchjobs }
 
 }

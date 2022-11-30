@@ -27,9 +27,12 @@ export const useForm = () => {
             const credentials = await signInWithPopup(auth, provider)
             postSigninClient(credentials.user.accessToken).then((res) => {
                 if (res.data.auth === true) {
-                    login(res.data.message)
-                    localStorage.setItem('pinture', res.data.pinture)
-                    navigate('/welcome/search');
+                    login(res.data)
+                    if (res.data.accounttype === "person") {
+                        navigate('/welcome/search');
+                    } else {
+                        navigate('/welcomecompany/profilebusiness');
+                    }
                 } else {
                     setResponse(res.data.message)
                 }
@@ -54,9 +57,12 @@ export const useForm = () => {
             const credentials = await signInWithPopup(auth, provider)
             postSigninClient(credentials.user.accessToken).then((res) => {
                 if (res.data.auth === true) {
-                    login(res.data.message)
-                    localStorage.setItem('pinture', res.data.pinture)
-                    navigate('/welcome/search');
+                    login(res.data)
+                    if (res.data.accounttype === "person") {
+                        navigate('/welcome/search');
+                    } else {
+                        navigate('/welcomecompany/profilebusiness');
+                    }
                 } else {
                     setResponse(res.data.message)
                 }
@@ -82,9 +88,12 @@ export const useForm = () => {
             const credentials = await signInWithPopup(auth, provider)
             postSigninClient(credentials.user.accessToken).then((res) => {
                 if (res.data.auth === true) {
-                    login(res.data.message);
-                    localStorage.setItem('pinture', res.data.pinture);
-                    navigate('/welcome/search');
+                    login(res.data)
+                    if (res.data.accounttype === "person") {
+                        navigate('/welcome/search');
+                    } else {
+                        navigate('/welcomecompany/profilebusiness');
+                    }
                 } else {
                     setResponse(res.data.message)
                 }
